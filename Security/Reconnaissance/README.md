@@ -4,36 +4,38 @@
 
 OSINT, network discovery, surface mapping, and exposure search. **Lab / authorized targets only.**
 
-Methodology (how recon works, defense, program order): [Security-Deep-Dive / Reconnaissance](https://github.com/thisiskushal31/Security-Deep-Dive/tree/main/Reconnaissance). This folder owns **install and first-use only** — do not re-teach program methodology here, and do not invent a second home for a tool that already has a folder (same rule as [n8n → Automation](../../Automation/n8n/README.md)).
+Methodology: [Security-Deep-Dive / Reconnaissance](https://github.com/thisiskushal31/Security-Deep-Dive/tree/main/Reconnaissance). This folder owns **install and first-use only**.
 
 Wire meaning of a scan → Networks `Security/8`.
 
-## By capability
+## By capability (pick an alternative)
 
-Labels for **routing**, not new directories. One product → one folder below; several programs may link the same folder.
-
-| Capability | Tools (existing folders only) | Typical jobs |
-|------------|-------------------------------|--------------|
-| **Network scanners** | [Nmap](./Nmap/README.md) · [Masscan](./Masscan/README.md) | Host/port/service discovery; inventory confirmation; purple scan noise |
-| **OSINT collectors** | [theHarvester](./theHarvester/README.md) · [Amass](./Amass/README.md) · [Maltego](./Maltego/README.md) · [SpiderFoot](./SpiderFoot/README.md) · [Recon-ng](./Recon-ng/README.md) | Public emails, hosts, link graphs, automated OSINT |
-| **Web surface mappers** | [Gobuster](./Gobuster/README.md) · [ffuf](./ffuf/README.md) · [Nikto](./Nikto/README.md) · [Nuclei](./Nuclei/README.md) | Paths, vhosts, DNS brute, known-misconfig / template checks |
-| **Exposure search** | [Shodan](./Shodan/README.md) | Internet-facing inventory for **owned / contracted** assets (ASM-style) |
-| **Vuln scanners (overlap)** | [GVM](./GVM/README.md) · [Nuclei](./Nuclei/README.md) | After discovery — program depth in Security-Deep-Dive Vulnerability-Management |
+| Capability | Alternatives (same job — choose one or combine) |
+|------------|--------------------------------------------------|
+| **Network scanners** | [Nmap](./Nmap/README.md) · [Masscan](./Masscan/README.md) |
+| **OSINT collectors** | [theHarvester](./theHarvester/README.md) · [Amass](./Amass/README.md) · [subfinder](./subfinder/README.md) · [Maltego](./Maltego/README.md) · [SpiderFoot](./SpiderFoot/README.md) · [Recon-ng](./Recon-ng/README.md) |
+| **Web surface mappers** | [Gobuster](./Gobuster/README.md) · [ffuf](./ffuf/README.md) · [feroxbuster](../Offensive/feroxbuster/README.md) · [Nikto](./Nikto/README.md) · [Nuclei](./Nuclei/README.md) · [WhatWeb](./WhatWeb/README.md) · [httpx](./httpx/README.md) |
+| **Exposure search** | [Shodan](./Shodan/README.md) · [Censys](./Censys/README.md) |
+| **Vuln scanners (overlap)** | [GVM](./GVM/README.md) · [Nuclei](./Nuclei/README.md) |
 
 ## All tool folders
 
 | Folder | Job |
 |--------|-----|
-| [Nmap](./Nmap/README.md) | Port / service scan — first lab door |
+| [Nmap](./Nmap/README.md) | Port / service scan |
 | [Masscan](./Masscan/README.md) | Fast port sweep |
 | [theHarvester](./theHarvester/README.md) | Public emails / names / hosts |
 | [Maltego](./Maltego/README.md) | Link analysis |
-| [Shodan](./Shodan/README.md) | Internet-facing inventory (lab / owned assets) |
+| [Shodan](./Shodan/README.md) | Exposure search |
+| [Censys](./Censys/README.md) | Exposure search (alt) |
 | [Recon-ng](./Recon-ng/README.md) | Recon framework |
-| [Amass](./Amass/README.md) | Attack-surface mapping |
+| [Amass](./Amass/README.md) | Attack-surface / subdomain mapping |
+| [subfinder](./subfinder/README.md) | Passive subdomains (alt/companion) |
 | [SpiderFoot](./SpiderFoot/README.md) | OSINT automation |
-| [Nikto](./Nikto/README.md) | Web server scan |
+| [Nikto](./Nikto/README.md) | Web server checks |
 | [Nuclei](./Nuclei/README.md) | Template vulns |
 | [Gobuster](./Gobuster/README.md) | Dir / DNS brute |
-| [ffuf](./ffuf/README.md) | Fuzzing |
+| [ffuf](./ffuf/README.md) | HTTP fuzzing |
+| [WhatWeb](./WhatWeb/README.md) | Tech fingerprint |
+| [httpx](./httpx/README.md) | HTTP probe / tech glance |
 | [GVM](./GVM/README.md) | OpenVAS / vulnerability scan |
